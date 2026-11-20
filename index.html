@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#171819" />
+    <title>Foldory</title>
+    <link rel="stylesheet" href="/startup.css" />
+  </head>
+  <body>
+    <div id="root">
+      <div class="startup-shell" aria-label="Foldory is starting">
+        <nav class="startup-rail" aria-hidden="true">
+          <div class="startup-logo">
+            <svg
+              width="34"
+              height="34"
+              viewBox="0 0 100 100"
+              aria-hidden="true"
+            >
+              <path
+                fill="#0067f4"
+                fill-rule="evenodd"
+                d="M8 24 45 10v66L8 90zM20 32v40l13-5V27z"
+              />
+              <path fill="#f3f3f4" d="m57 10 35 14v66L57 76z" />
+            </svg>
+          </div>
+          <div class="startup-rail-items">
+            <span class="startup-rail-item">⌂</span>
+            <span class="startup-rail-item">⌕</span>
+            <span class="startup-rail-item">✦</span>
+            <span class="startup-rail-item">⚙</span>
+          </div>
+          <span class="startup-rail-bottom">PC</span>
+        </nav>
+        <aside class="startup-sidebar" aria-hidden="true">
+          <div class="startup-brand">
+            <span>Foldory <span class="startup-version">v1.2</span></span>
+            <span>‹</span>
+          </div>
+          <div class="startup-search-row">
+            <div class="startup-search">
+              <span>⌕</span><span>Search projects</span>
+            </div>
+            <div class="startup-add">＋</div>
+          </div>
+          <div class="startup-sidebar-body">
+            <div class="startup-sidebar-heading">
+              <span>PINNED</span><span>›</span>
+            </div>
+            <div class="startup-sidebar-heading">
+              <span>RECENTLY OPENED</span><span>›</span>
+            </div>
+            <div class="startup-sidebar-heading">
+              <span>ALL PROJECTS</span><span>⌄</span>
+            </div>
+          </div>
+          <div class="startup-sidebar-footer">
+            <span class="startup-dot"></span>
+            <span>Local workspace</span>
+          </div>
+        </aside>
+        <main class="startup-main">
+          <header class="startup-topbar">
+            <span
+              >Workspace&nbsp;&nbsp;/&nbsp;&nbsp;<strong>Projects</strong></span
+            >
+            <span class="startup-local"
+              ><span class="startup-dot"></span>On your computer</span
+            >
+          </header>
+          <div class="startup-loading" role="status" aria-live="polite">
+            <span class="startup-spinner" aria-hidden="true"></span>
+            <span>Opening your workspace…</span>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script src="/reveal.js"></script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

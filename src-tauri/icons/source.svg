@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-label="Foldory app icon">
+  <title>Foldory app icon</title>
+  <defs>
+    <linearGradient id="tile" x1="160" y1="104" x2="854" y2="920" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0876ff"/>
+      <stop offset="0.63" stop-color="#005fe9"/>
+      <stop offset="1" stop-color="#0057d8"/>
+    </linearGradient>
+    <filter id="symbol-shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#00205f" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect x="56" y="56" width="912" height="912" rx="224" fill="url(#tile)"/>
+  <rect x="72" y="72" width="880" height="880" rx="208" fill="none" stroke="#ffffff" stroke-opacity="0.14" stroke-width="8"/>
+  <g transform="translate(212 212) scale(6)" filter="url(#symbol-shadow)">
+    <path fill="#ffffff" fill-rule="evenodd" d="M8 24 45 10v66L8 90zM20 32v40l13-5V27z"/>
+    <path fill="#ffffff" d="m57 10 35 14v66L57 76z"/>
+  </g>
+</svg>

@@ -1,0 +1,1231 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Foldory — How To &amp; Help</title>
+    <style>
+      #project-manager-help {
+        color-scheme: dark;
+        color: #dce2ee;
+        font:
+          14px/1.8 Inter,
+          "Segoe UI",
+          system-ui,
+          sans-serif;
+        max-width: 1080px;
+        margin: auto;
+        padding: 36px;
+        box-sizing: border-box;
+        user-select: text;
+      }
+      #project-manager-help * {
+        box-sizing: border-box;
+      }
+      #project-manager-help a {
+        color: #b8cef5;
+        text-decoration: none;
+      }
+      #project-manager-help a:hover {
+        text-decoration: underline;
+      }
+      #project-manager-help .help-eyebrow {
+        color: #94acd5;
+        font-size: 10px;
+        letter-spacing: 2px;
+        font-weight: 500;
+      }
+      #project-manager-help h1 {
+        font-size: clamp(30px, 4vw, 46px);
+        line-height: 1.15;
+        letter-spacing: -1.4px;
+        font-weight: 500;
+        margin: 14px 0 18px;
+      }
+      #project-manager-help h2 {
+        font-size: 24px;
+        font-weight: 500;
+        letter-spacing: -0.5px;
+        margin: 0 0 12px;
+        line-height: 1.35;
+      }
+      #project-manager-help h3 {
+        font-size: 15px;
+        font-weight: 600;
+        margin: 22px 0 10px;
+      }
+      #project-manager-help p {
+        color: #a8b2c5;
+        margin: 10px 0 16px;
+      }
+      #project-manager-help strong {
+        font-weight: 600;
+        color: #dce5f7;
+      }
+      #project-manager-help .help-lead {
+        max-width: 650px;
+        font-size: 15px;
+      }
+      #project-manager-help .help-hero {
+        position: relative;
+        border-bottom: 1px solid #364052;
+        padding: 12px 0 32px;
+      }
+      #project-manager-help .help-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 23px;
+      }
+      #project-manager-help .help-pills span {
+        color: #aabedc;
+        font-size: 11px;
+        border: 1px solid #435473;
+        background: #728fbc0d;
+        border-radius: 20px;
+        padding: 4px 12px;
+      }
+      #project-manager-help nav {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+        padding: 26px 0;
+      }
+      #project-manager-help nav a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border: 1px solid #364154;
+        background: #20262f;
+        border-radius: 8px;
+        padding: 11px 13px;
+        color: #c4d3ec;
+        font-size: 12px;
+      }
+      #project-manager-help nav a > span {
+        color: #7f99c4;
+        font-size: 10px;
+      }
+      #project-manager-help section {
+        padding: 32px 0;
+        border-bottom: 1px solid #323b4b;
+        scroll-margin-top: 20px;
+      }
+      #project-manager-help .help-section-number {
+        display: inline-block;
+        color: #8da9d5;
+        font: 11px monospace;
+        margin-bottom: 10px;
+      }
+      #project-manager-help .help-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+        margin: 20px 0;
+      }
+      #project-manager-help .help-card {
+        background: #20252e;
+        border: 1px solid #3a4557;
+        border-radius: 11px;
+        padding: 20px;
+      }
+      #project-manager-help .help-card h3 {
+        margin-top: 0;
+      }
+      #project-manager-help .help-card p:last-child {
+        margin-bottom: 0;
+      }
+      #project-manager-help .help-callout {
+        padding: 14px 18px;
+        background: #8aafe50b;
+        border-left: 3px solid #8aa8d6;
+        border-radius: 0 7px 7px 0;
+        color: #b5c6df;
+        font-size: 12px;
+        margin: 20px 0;
+      }
+      #project-manager-help .help-private {
+        border-left-color: #8fbea5;
+        background: #83bc9c0b;
+      }
+      #project-manager-help ul,
+      #project-manager-help ol {
+        padding-left: 21px;
+        color: #a8b2c5;
+      }
+      #project-manager-help li {
+        padding: 4px 0;
+      }
+      #project-manager-help code,
+      #project-manager-help kbd {
+        font:
+          11px/1.6 Consolas,
+          monospace;
+        background: #29313e;
+        color: #c1d3f3;
+        border: 1px solid #3c485c;
+        border-radius: 4px;
+        padding: 2px 5px;
+        overflow-wrap: anywhere;
+      }
+      #project-manager-help pre {
+        background: #171c24;
+        border: 1px solid #384357;
+        border-radius: 9px;
+        padding: 19px;
+        overflow: auto;
+        color: #b8cbea;
+        font:
+          12px/1.9 Consolas,
+          monospace;
+      }
+      #project-manager-help .help-secure {
+        color: #97cfb0;
+      }
+      #project-manager-help table {
+        border-collapse: collapse;
+        width: 100%;
+        font-size: 12px;
+        margin: 18px 0;
+      }
+      #project-manager-help th {
+        text-align: left;
+        color: #c8d6ec;
+        font-weight: 500;
+        background: #242d3b;
+      }
+      #project-manager-help th,
+      #project-manager-help td {
+        border: 1px solid #354154;
+        padding: 11px 13px;
+        vertical-align: top;
+      }
+      #project-manager-help td {
+        color: #a8b5cb;
+      }
+      #project-manager-help .help-table-scroll {
+        overflow-x: auto;
+      }
+      #project-manager-help .help-figure {
+        margin: 22px 0;
+        padding: 24px;
+        border: 1px solid #3c4a60;
+        border-radius: 12px;
+        background:
+          radial-gradient(ellipse at 40% 0, #6f93cb14, transparent 80%), #191e28;
+      }
+      #project-manager-help .help-figure svg {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-height: 240px;
+      }
+      #project-manager-help .help-figure figcaption {
+        color: #8396b6;
+        font-size: 11px;
+        text-align: center;
+        margin-top: 17px;
+      }
+      #project-manager-help .help-toolbar {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        flex-wrap: wrap;
+        font-size: 11px;
+        background: #273345;
+        padding: 11px 14px;
+        border: 1px solid #435674;
+        border-radius: 7px;
+        color: #b6c9e8;
+      }
+      #project-manager-help .help-toolbar .selected {
+        color: #e2edff;
+        border-bottom: 2px solid #aac5f5;
+        padding: 4px;
+      }
+      #project-manager-help .help-toolbar .inspect {
+        margin-left: auto;
+        padding: 4px 10px;
+        border: 1px solid #879fca;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      #project-manager-help .help-toolbar svg {
+        width: 16px;
+        height: 16px;
+      }
+      #project-manager-help .help-flow {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 8px;
+        margin: 20px 0;
+      }
+      #project-manager-help .help-flow > div {
+        flex: 1;
+        text-align: center;
+        border: 1px solid #455777;
+        border-radius: 8px;
+        background: #2739543d;
+        padding: 15px 8px;
+        font-size: 12px;
+        color: #bdd2f3;
+      }
+      #project-manager-help .help-flow > span {
+        color: #758caf;
+      }
+      #project-manager-help details {
+        border: 1px solid #39455a;
+        border-radius: 8px;
+        margin: 10px 0;
+        padding: 13px 17px;
+      }
+      #project-manager-help summary {
+        cursor: pointer;
+        color: #ccd9ef;
+        font-size: 13px;
+      }
+      #project-manager-help details p {
+        font-size: 12px;
+        margin-bottom: 3px;
+      }
+      #project-manager-help footer {
+        padding-top: 25px;
+        color: #7e90ac;
+        font-size: 11px;
+      }
+      @media (max-width: 750px) {
+        #project-manager-help {
+          padding: 22px 18px;
+        }
+        #project-manager-help nav {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        #project-manager-help .help-grid {
+          grid-template-columns: 1fr;
+        }
+        #project-manager-help .help-flow {
+          flex-wrap: wrap;
+        }
+        #project-manager-help .help-flow > div {
+          flex-basis: 40%;
+        }
+      }
+      @media print {
+        #project-manager-help {
+          color-scheme: light;
+          color: #172033;
+          padding: 0;
+          max-width: none;
+        }
+        #project-manager-help p,
+        #project-manager-help li,
+        #project-manager-help td,
+        #project-manager-help strong {
+          color: #273449;
+        }
+        #project-manager-help section {
+          break-inside: avoid;
+        }
+        #project-manager-help details {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body style="margin: 0; background: #1b1e24">
+    <main id="project-manager-help">
+      <header class="help-hero">
+        <span class="help-eyebrow">THE FOLDORY HANDBOOK</span>
+        <h1>A place for your projects.<br />A guide for everything else.</h1>
+        <p class="help-lead">
+          Bring your folders together, find what matters, and pick up where you
+          left off. Here’s how to make Foldory work for you.
+        </p>
+        <div class="help-pills">
+          <span>Local by default</span><span>No app account required</span
+          ><span>AI is optional</span
+          ><span>Works offline for everyday tasks</span>
+        </div>
+      </header>
+      <nav aria-label="Help topics">
+        <a href="#help-setup"><span>01</span>First-time setup</a
+        ><a href="#help-sources"><span>02</span>Sources &amp; library</a
+        ><a href="#help-templates"><span>03</span>Templates &amp; privacy</a>
+        <a href="#help-files"><span>04</span>Files &amp; editing</a
+        ><a href="#help-search"><span>05</span>Search &amp; indexing</a
+        ><a href="#help-ai"><span>06</span>AI connections</a>
+        <a href="#help-assistant"><span>07</span>Using the assistant</a
+        ><a href="#help-inspector"><span>08</span>Project inspector</a
+        ><a href="#help-word"><span>09</span>Visual Word parsing</a>
+        <a href="#help-tools"><span>10</span>Tools, Git &amp; integrations</a
+        ><a href="#help-settings"><span>11</span>Settings &amp; shortcuts</a
+        ><a href="#help-troubleshooting"
+          ><span>12</span>Data &amp; troubleshooting</a
+        >
+      </nav>
+      <section id="help-setup">
+        <span class="help-section-number">01 / GETTING STARTED</span>
+        <h2>Four small steps to a useful workspace.</h2>
+        <p>
+          On the first launch, the setup wizard opens automatically. You can run
+          it again from
+          <strong>Settings → How To &amp; Help → Run onboarding</strong>, or
+          from General. It uses your saved configuration when you return.
+        </p>
+        <div class="help-flow">
+          <div>1. Add project sources</div>
+          <span>→</span>
+          <div>2. Connect AI, optionally</div>
+          <span>→</span>
+          <div>3. Pick a template</div>
+          <span>→</span>
+          <div>4. Meet the inspector</div>
+        </div>
+        <p>
+          Use <strong>Continue</strong> to save each step.
+          <strong>Back</strong> revisits a step.
+          <strong>Skip setup</strong> closes the wizard and remembers that you
+          dismissed it; changes already saved are kept.
+          <strong>Skip AI / set up later</strong> leaves existing AI preferences
+          in place. Unsaved form edits are not applied when you skip.
+        </p>
+        <div class="help-callout">
+          Setup is a reusable configuration flow. You can add more sources,
+          change the default template, or connect a different provider whenever
+          your work changes.
+        </div>
+      </section>
+      <section id="help-sources">
+        <span class="help-section-number">02 / YOUR LIBRARY</span>
+        <h2>Your folders are already your projects.</h2>
+        <p>
+          A <strong>source</strong> is a parent directory. Its immediate child
+          folders become projects. For example, add <code>D:\Projects</code> to
+          see <code>D:\Projects\Website</code> and
+          <code>D:\Projects\Brand</code> in your library.
+        </p>
+        <figure class="help-figure">
+          <svg
+            viewBox="0 0 720 190"
+            role="img"
+            aria-label="One source directory contains three project folders"
+          >
+            <g fill="none" stroke="#536e9d" stroke-width="1.5">
+              <path d="M230 95H315V35H370M315 95H370M315 95V155H370" />
+            </g>
+            <rect
+              x="20"
+              y="55"
+              width="210"
+              height="80"
+              rx="12"
+              fill="#28374e"
+              stroke="#6883b0"
+            />
+            <path
+              d="M43 78h16l5 6h25v28H43z"
+              fill="none"
+              stroke="#b8d0fa"
+              stroke-width="2"
+            />
+            <g font-family="Segoe UI, sans-serif">
+              <text x="104" y="89" fill="#d4e3ff" font-size="15">
+                D:\Projects
+              </text>
+              <text x="104" y="111" fill="#91a8cc" font-size="11">
+                Source folder
+              </text>
+              <rect
+                x="370"
+                y="12"
+                width="310"
+                height="45"
+                rx="8"
+                fill="#222d40"
+                stroke="#465e83"
+              />
+              <text x="390" y="40" fill="#c2d4f3" font-size="13">
+                ▱ Website redesign
+              </text>
+              <rect
+                x="370"
+                y="72"
+                width="310"
+                height="45"
+                rx="8"
+                fill="#222d40"
+                stroke="#465e83"
+              />
+              <text x="390" y="100" fill="#c2d4f3" font-size="13">
+                ▱ Brand identity
+              </text>
+              <rect
+                x="370"
+                y="132"
+                width="310"
+                height="45"
+                rx="8"
+                fill="#222d40"
+                stroke="#465e83"
+              />
+              <text x="390" y="160" fill="#c2d4f3" font-size="13">
+                ▱ Next big idea
+              </text>
+            </g>
+          </svg>
+          <figcaption>
+            Add the parent once. Each child folder becomes a project.
+          </figcaption>
+        </figure>
+        <ol>
+          <li>
+            Open <strong>Settings → Project sources</strong>, or the Sources
+            step in onboarding.
+          </li>
+          <li>
+            Choose a folder with the <strong>+</strong> button, or enter its
+            full path. Repeat for additional sources.
+          </li>
+          <li>
+            Refresh to discover newly added folders. Hidden/system directories
+            and directory links are skipped.
+          </li>
+        </ol>
+        <p>
+          Sources cannot overlap. Disconnect a source to keep it saved but
+          inactive; reconnect it later. Offline drives remain in the library.
+          Removing a source removes its library/index records, while its files
+          remain on disk.
+        </p>
+        <div class="help-grid">
+          <div class="help-card">
+            <h3>Make the library yours</h3>
+            <p>
+              Use project actions to set a display name or emoji, client, tags,
+              folder color, pin, or hide. Labels are stored in the app; folder
+              names stay the same.
+            </p>
+          </div>
+          <div class="help-card">
+            <h3>Find the right project</h3>
+            <p>
+              Filter by name, alias, client, tags or path. Sort the dashboard by
+              recent activity, name or folder update. Group the sidebar by
+              source, fold groups and resize the sidebar.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="help-templates">
+        <span class="help-section-number">03 / A CONSISTENT START</span>
+        <h2>Build a structure you’ll want to reuse.</h2>
+        <p>
+          Templates create folders and starter text files in a new project. In
+          onboarding, select a saved template or choose
+          <strong>Create a template</strong>. Your selection becomes the default
+          in the New project dialog. Manage saved templates later in
+          <strong>Settings → Project templates</strong>.
+        </p>
+        <div class="help-grid">
+          <div>
+            <ol>
+              <li>
+                <strong>Name.</strong> Give the template a recognizable name.
+              </li>
+              <li>
+                <strong>Folders &amp; files.</strong> Add one relative folder
+                per line; use <code>/</code> for nesting. Add starter files with
+                a path and content. Watch the live tree update.
+              </li>
+              <li>
+                <strong>Protect.</strong> Click the shield beside a file or
+                folder to move it under <code>Secure/</code>. Click again to
+                move it out.
+              </li>
+              <li>
+                <strong>Save or continue.</strong> Save a template to add more,
+                or continue to save and use it by default for future projects.
+              </li>
+            </ol>
+          </div>
+          <pre aria-label="Example template folder tree">My next project/
+├── App/
+├── Design/
+│   └── Assets/
+├── Docs/
+├── PROJECT.md
+└── <span class="help-secure">Secure/  ◇
+    ├── Access/
+    └── client-notes.md</span></pre>
+        </div>
+        <p>
+          Starter files can contain <code>{{name}}</code> and
+          <code>{{client}}</code>; these are replaced when a project is created.
+          Use <strong>New project</strong> or <kbd>Ctrl Shift N</kbd>, choose a
+          source, name, client and template, then create it. Editing a template
+          affects future projects.
+        </p>
+        <div class="help-callout help-private">
+          <strong>What “Secure” means.</strong> Secure folders are excluded from
+          content indexing, the inspector and app AI context by default.
+          Explicit AI inclusion needs approval. This is an app privacy
+          convention, not encryption or a filesystem permission. External tools
+          and provider CLIs use their own access rules. Never put real
+          credentials into reusable starter-file contents.
+        </div>
+      </section>
+      <section id="help-files">
+        <span class="help-section-number">04 / EVERYDAY WORK</span>
+        <h2>Read, edit and organize without leaving the project.</h2>
+        <div class="help-toolbar">
+          <span>My project</span><span class="selected">Overview</span
+          ><span>Files</span><span>Git</span><span>Assistant</span>
+        </div>
+        <p>
+          <strong>Overview</strong> opens <code>PROJECT.md</code> in preview,
+          edit or split mode. Create it when missing.
+          <strong>Files</strong> browses folders on demand, with breadcrumbs,
+          type icons and multi-select.
+        </p>
+        <div class="help-table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>File type</th>
+                <th>What opens</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Markdown, code and UTF-8 text</td>
+                <td>
+                  Editor with find, undo/redo, line numbers and wrapping. Syntax
+                  highlighting supports JS/TS, JSON, HTML/CSS, Rust, Python,
+                  C/C++ and C#.
+                </td>
+              </tr>
+              <tr>
+                <td>PNG / JPEG</td>
+                <td>Image preview in the app.</td>
+              </tr>
+              <tr>
+                <td>CSV / XLSX / DOCX</td>
+                <td>
+                  Local extraction of records, cells and Word structure.
+                  Spreadsheet formulas use cached values; they are not
+                  recalculated.
+                </td>
+              </tr>
+              <tr>
+                <td>Binary, non-UTF-8 or files above 2 MiB</td>
+                <td>The Windows default application.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          Edits autosave. Navigation waits for a pending save. If another
+          program changes the file, reload the disk version or choose to
+          overwrite. A failed save keeps your draft for recovery. Create
+          files/folders or cut, copy, paste and delete in Files; protected
+          operations ask for confirmation.
+        </p>
+        <p>
+          <strong>Settings → Files &amp; editor</strong> controls session
+          restore, open files, scroll positions, default mode, wrap, line
+          numbers, preview width and font sizes.
+        </p>
+      </section>
+      <section id="help-search">
+        <span class="help-section-number">05 / FIND WHAT MATTERS</span>
+        <h2>Search across your library, or just one project.</h2>
+        <p>
+          Press <kbd>Ctrl K</kbd> to search file names, indexed text or
+          containing folders. The sidebar project filter also surfaces matching
+          folders through three levels.
+        </p>
+        <div class="help-flow">
+          <div>Source folders</div>
+          <span>→</span>
+          <div>Local background index</div>
+          <span>→</span>
+          <div>File &amp; text matches</div>
+        </div>
+        <p>
+          <strong>Settings → Search &amp; indexing</strong> contains
+          language/framework exclusion presets, custom folder/file patterns,
+          optional nested <code>.gitignore</code> handling, project statistics,
+          clearing and reindexing. Use project-relative paths or globs such as
+          <code>node_modules</code> or <code>*.log</code>.
+        </p>
+        <p>
+          Indexing is incremental and only runs while the app is open. Secure
+          folders, environment files, keys and credential-like content stay out
+          by default. Clearing an index deletes cached records and pauses that
+          project until you reindex it; project files are untouched.
+        </p>
+      </section>
+      <section id="help-ai">
+        <span class="help-section-number">06 / OPTIONAL AI</span>
+        <h2>Choose where your AI requests go.</h2>
+        <p>
+          Configure AI in onboarding or
+          <strong>Settings → AI connection</strong>. Your project context is
+          sent when you use an AI action. Connection checks fetch provider model
+          catalogs. Search, editing and library organization work without AI.
+        </p>
+        <div class="help-table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Provider</th>
+                <th>Connection</th>
+                <th>Models</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Codex</td>
+                <td>
+                  Install the supported CLI and sign in through the app’s
+                  provider action.
+                </td>
+                <td>Choose from its available catalog or provider default.</td>
+              </tr>
+              <tr>
+                <td>Cursor</td>
+                <td>
+                  Install the supported CLI and sign in through the app’s
+                  provider action.
+                </td>
+                <td>Choose from available models or provider default.</td>
+              </tr>
+              <tr>
+                <td>Claude Code</td>
+                <td>
+                  Install Claude Code and use its CLI sign-in. It opens in its
+                  own terminal.
+                </td>
+                <td>
+                  Use <code>/model</code> in Claude Code. It is a native
+                  launcher; it is not an in-app Assistant/Inspector model.
+                </td>
+              </tr>
+              <tr>
+                <td>LM Studio</td>
+                <td>
+                  Start its OpenAI-compatible local server. Enter
+                  <code>127.0.0.1:1234</code> or
+                  <code>http://127.0.0.1:1234/v1</code>.
+                </td>
+                <td>
+                  Save &amp; test fetches the server’s model list automatically.
+                </td>
+              </tr>
+              <tr>
+                <td>Custom</td>
+                <td>
+                  Enter an OpenAI-compatible base URL, including its API prefix.
+                  API key is optional when the server allows it.
+                </td>
+                <td>
+                  Fetched automatically after saving. You can also enter a model
+                  ID.
+                </td>
+              </tr>
+              <tr>
+                <td>Unsloth</td>
+                <td>
+                  Available in Settings under Custom providers, with its own
+                  endpoint and credential.
+                </td>
+                <td>Refresh its model catalog after saving the server URL.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>Connect a local or custom endpoint</h3>
+        <ol>
+          <li>Start the server and load a model.</li>
+          <li>
+            Select LM Studio or Custom. Enter its endpoint URL or IP:port.
+            Onboarding adds <code>/v1</code> when there is no path.
+          </li>
+          <li>
+            Paste an API key if needed; leave it blank for a server without
+            authentication. When reconfiguring, blank keeps an existing key.
+            Choose the remove-key checkbox to connect without it.
+          </li>
+          <li>
+            Select <strong>Save &amp; test connection</strong>. The app saves
+            the endpoint and automatically fetches models, showing success or a
+            useful error.
+          </li>
+          <li>
+            Choose a model and continue. For in-app providers, onboarding
+            applies the choice to project/global Assistants and Inspector. Each
+            surface can later use its own model picker.
+          </li>
+        </ol>
+        <div class="help-callout">
+          HTTP is allowed for loopback servers such as localhost or 127.0.0.1.
+          Other hosts require HTTPS. Do not put keys in URLs. API keys live in
+          Windows Credential Manager; provider CLIs handle their own
+          authentication. Use <strong>Check connection</strong> after returning
+          from a sign-in window.
+        </div>
+      </section>
+      <section id="help-assistant">
+        <span class="help-section-number"
+          >07 / A CONVERSATION WITH CONTEXT</span
+        >
+        <h2>Ask about your project, with controlled access.</h2>
+        <p>
+          The global Assistant sees the project catalog. A project’s
+          <strong>Assistant</strong> tab works in that project and can be pinned
+          alongside Files. Choose the provider/model, then type a message.
+          <kbd>Enter</kbd> sends; <kbd>Shift Enter</kbd> adds a line.
+        </p>
+        <p>
+          In the global Assistant, use <strong>+</strong> to add more context to
+          a request. Select <strong>Relevant docs from all projects</strong> for
+          automatic workspace-wide context. For precise context, expand one or
+          more projects and select their README/PROJECT overview, Docs folder,
+          or exact files and subfolders. Your selections appear above the
+          message box and can be removed before sending. Excluded or sensitive
+          paths ask for permission before anything is shared. With no selection,
+          only the full project catalog is included.
+        </p>
+        <p>
+          Attach files and folders from the explorer, by drag-and-drop, or with
+          <code>@path</code> / <code>/path</code>. CSV, XLSX and DOCX are
+          attached as extracted text. Source snapshots are saved with the
+          message and can be reused in follow-ups; delete the message or chat to
+          remove them.
+        </p>
+        <div class="help-grid">
+          <div class="help-card">
+            <h3>Choose an access mode</h3>
+            <p>
+              <strong>Read only:</strong> proposed writes wait for Approve
+              once.<br /><strong>Write:</strong> ordinary text changes may
+              apply; protected paths ask.<br /><strong>Full:</strong> broader
+              project writes and explicit source inclusion, confined to the
+              current project.
+            </p>
+          </div>
+          <div class="help-card">
+            <h3>Stay in control</h3>
+            <p>
+              Excluded sources and credential-like content require explicit
+              approval. App AI writes are revision-checked UTF-8 text changes
+              inside the project. They do not run shell commands. Provider CLIs
+              have their own access behavior.
+            </p>
+          </div>
+        </div>
+        <p>
+          Chats are kept per scope and survive a restart. Archive a conversation
+          to put it away; delete it when you want it removed.
+        </p>
+      </section>
+      <section id="help-inspector">
+        <span class="help-section-number"
+          >08 / FROM FOLDERS TO UNDERSTANDING</span
+        >
+        <h2>Meet the project inspector.</h2>
+        <p>
+          Open a project’s <strong>Overview</strong> and look for the
+          <strong>Project inspector</strong> button with the scan/search icon.
+        </p>
+        <div class="help-toolbar">
+          <span>Website redesign</span><span class="selected">Overview</span
+          ><span>Files</span
+          ><span class="inspect"
+            ><svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              aria-label="Inspector scan/search icon"
+            >
+              <path
+                d="M8 3H5a2 2 0 0 0-2 2v3m13-5h3a2 2 0 0 1 2 2v3M3 16v3a2 2 0 0 0 2 2h3"
+              />
+              <circle cx="12" cy="12" r="4" />
+              <path d="m15 15 6 6" /></svg
+            >Project inspector</span
+          >
+        </div>
+        <figure class="help-figure">
+          <svg
+            viewBox="0 0 720 170"
+            role="img"
+            aria-label="Inspector workflow: project files become reviewed context and then an approved project overview"
+          >
+            <g font-family="Segoe UI, sans-serif">
+              <rect
+                x="8"
+                y="20"
+                width="180"
+                height="130"
+                rx="10"
+                fill="#222d40"
+                stroke="#4a638a"
+              />
+              <text x="28" y="48" fill="#bed2f5" font-size="13">
+                Project files
+              </text>
+              <text x="28" y="77" fill="#91a6c8" font-size="11">
+                App / README / Docs
+              </text>
+              <text x="28" y="105" fill="#8fc1a7" font-size="11">
+                Secure stays excluded
+              </text>
+              <path d="M206 85h40m-8-7 8 7-8 7" stroke="#718ebd" fill="none" />
+              <rect
+                x="264"
+                y="20"
+                width="180"
+                height="130"
+                rx="10"
+                fill="#222d40"
+                stroke="#4a638a"
+              />
+              <text x="284" y="48" fill="#bed2f5" font-size="13">
+                Review context
+              </text>
+              <text x="284" y="77" fill="#91a6c8" font-size="11">
+                See what will be sent
+              </text>
+              <text x="284" y="105" fill="#91a6c8" font-size="11">
+                Choose model &amp; prompt
+              </text>
+              <path d="M462 85h40m-8-7 8 7-8 7" stroke="#718ebd" fill="none" />
+              <rect
+                x="520"
+                y="20"
+                width="192"
+                height="130"
+                rx="10"
+                fill="#263a38"
+                stroke="#5f8d79"
+              />
+              <text x="540" y="48" fill="#c9e5d7" font-size="13">
+                PROJECT.md draft
+              </text>
+              <text x="540" y="77" fill="#99bfae" font-size="11">
+                Purpose · Structure · Tasks
+              </text>
+              <text x="540" y="105" fill="#99bfae" font-size="11">
+                Approve before saving
+              </text>
+            </g>
+          </svg>
+          <figcaption>
+            Scan locally → inspect the exact context → generate → review →
+            approve save.
+          </figcaption>
+        </figure>
+        <ol>
+          <li>
+            Scan the project locally. The inspector builds a bounded snapshot
+            and applies exclusions.
+          </li>
+          <li>
+            Review the exact context before sending it. Choose a configured
+            in-app AI provider and prompt profile.
+          </li>
+          <li>Generate and review the proposed <code>PROJECT.md</code>.</li>
+          <li>
+            Approve saving in the separate confirmation. If the file changed
+            since scanning, generate again.
+          </li>
+        </ol>
+        <p>
+          <strong>Settings → Project inspector</strong> manages exclusion
+          patterns, output-token budget, timeout, default profile and reusable
+          prompts/templates. The inspector writes only
+          <code>PROJECT.md</code> after approval.
+        </p>
+      </section>
+      <section id="help-word">
+        <span class="help-section-number">09 / DOCUMENT UNDERSTANDING</span>
+        <h2>Turn Word pages into readable Markdown.</h2>
+        <p>
+          Normal DOCX previews extract structure locally.
+          <strong>Visual Word parsing</strong> is a separate, optional AI
+          operation for documents where page layout matters.
+        </p>
+        <ol>
+          <li>
+            Install Microsoft Word or LibreOffice for local document rendering.
+          </li>
+          <li>
+            Open a DOCX and choose the visual parsing action. Select a
+            vision-capable model at LM Studio, Unsloth or a Custom endpoint.
+          </li>
+          <li>
+            The app renders a private temporary PDF and sends one page image at
+            a time to the chosen model.
+          </li>
+          <li>
+            Stop or resume when needed, then copy the Markdown or save it beside
+            the source.
+          </li>
+        </ol>
+        <p>
+          The original document is not modified; macros and automatic link
+          updates are disabled during rendering. Parsing can misread complex
+          layouts. Compare important output with the original.
+        </p>
+      </section>
+      <section id="help-tools">
+        <span class="help-section-number">10 / YOUR EXISTING TOOLKIT</span>
+        <h2>Keep the tools you already use.</h2>
+        <div class="help-grid">
+          <div class="help-card">
+            <h3>Tools &amp; launchers</h3>
+            <p>
+              Open Explorer, Command Prompt or PowerShell in a project or nested
+              folder. <strong>Settings → Tools &amp; launchers</strong> detects
+              Cursor, Claude and Codex; enable desktop and CLI variants
+              separately.
+            </p>
+            <p>
+              Custom tools use an executable and JSON argument list.
+              <code>{{project}}</code> becomes the project-path argument.
+              Example: <code>["{{project}}"]</code>.
+            </p>
+          </div>
+          <div class="help-card">
+            <h3>Git at a glance</h3>
+            <p>
+              The Git tab shows the branch, bounded status and recent commits.
+              Install Git for Windows and use projects whose folder is the
+              repository root. Perform commits, pushes and branch changes in
+              your Git tools.
+            </p>
+          </div>
+        </div>
+        <h3>Cursor workspace integration</h3>
+        <p>
+          In <strong>Settings → Integrations</strong>, create a connection to a
+          Cursor <code>dashboard.projectData</code> file (JSONC is supported).
+          Its groups appear in a separate sidebar workspace with names, paths,
+          colors and availability. Registered projects open in the app; other
+          folders open in Explorer. Integration content is kept separate from
+          the library index.
+        </p>
+      </section>
+      <section id="help-settings">
+        <span class="help-section-number">11 / MAKE IT YOURS</span>
+        <h2>A settings map, and a few useful shortcuts.</h2>
+        <div class="help-table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Settings section</th>
+                <th>Configure</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Files &amp; editor</td>
+                <td>
+                  Session restore, positions, preview/edit defaults, wrap, line
+                  numbers, widths and fonts.
+                </td>
+              </tr>
+              <tr>
+                <td>Project sources</td>
+                <td>
+                  Add, connect, disconnect, remove and refresh parent folders.
+                </td>
+              </tr>
+              <tr>
+                <td>Search &amp; indexing</td>
+                <td>Exclusions, .gitignore, statistics, clear and rebuild.</td>
+              </tr>
+              <tr>
+                <td>Project templates</td>
+                <td>Reusable folder paths and starter files.</td>
+              </tr>
+              <tr>
+                <td>Tools &amp; launchers</td>
+                <td>Detected apps and custom executable/argument lists.</td>
+              </tr>
+              <tr>
+                <td>Integrations</td>
+                <td>Named external workspace connections.</td>
+              </tr>
+              <tr>
+                <td>AI connection</td>
+                <td>
+                  Endpoint URLs, keys, models, preferred models and provider
+                  sign-ins.
+                </td>
+              </tr>
+              <tr>
+                <td>Project inspector</td>
+                <td>Prompts, exclusions, token budget and timeout.</td>
+              </tr>
+              <tr>
+                <td>General</td>
+                <td>
+                  Automatic refresh interval (30–3600 seconds), app information
+                  and onboarding.
+                </td>
+              </tr>
+              <tr>
+                <td>How To &amp; Help</td>
+                <td>This illustrated guide and Run onboarding.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="help-table-scroll">
+          <table>
+            <thead>
+              <tr>
+                <th>Action</th>
+                <th>Shortcut</th>
+                <th>Action</th>
+                <th>Shortcut</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Find files</td>
+                <td><kbd>Ctrl K</kbd></td>
+                <td>Settings</td>
+                <td><kbd>Ctrl ,</kbd></td>
+              </tr>
+              <tr>
+                <td>Project filter</td>
+                <td><kbd>Ctrl Shift P</kbd></td>
+                <td>New project</td>
+                <td><kbd>Ctrl Shift N</kbd></td>
+              </tr>
+              <tr>
+                <td>Find in editor</td>
+                <td><kbd>Ctrl F</kbd></td>
+                <td>Undo / redo</td>
+                <td><kbd>Ctrl Z</kbd> / <kbd>Ctrl Y</kbd></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section id="help-troubleshooting">
+        <span class="help-section-number">12 / WHEN YOU NEED A HAND</span>
+        <h2>Your data, and common fixes.</h2>
+        <details open>
+          <summary>Where does the app keep my data?</summary>
+          <p>
+            The local library lives at
+            <code>%APPDATA%\ba.reflect.foldory\workspace.sqlite3</code>. It
+            stores sources, labels, templates, settings, chats and the search
+            index. Provider sign-ins and preferences can also use app-managed
+            files. API keys are in Windows Credential Manager. Project files
+            remain in their original folders; <code>PROJECT.md</code> travels
+            with the project.
+          </p>
+        </details>
+        <details>
+          <summary>How do I back up or use a different data directory?</summary>
+          <p>
+            Close the app before backing up its app-data directory. Back up your
+            actual project folders separately. Set
+            <code>FOLDORY_DATA_DIR</code> to an absolute path before launch for
+            an independent library; it does not migrate an existing one. The app
+            does not provide cloud sync or shared accounts.
+          </p>
+        </details>
+        <details>
+          <summary>My projects or drive disappeared.</summary>
+          <p>
+            Check Settings → Project sources. Reconnect disconnected sources,
+            attach an offline drive and refresh. Select the parent containing
+            your project folders; sources list immediate child folders, not
+            every nested folder.
+          </p>
+        </details>
+        <details>
+          <summary>Search cannot find a file.</summary>
+          <p>
+            Confirm the project source is connected, inspect exclusions and
+            .gitignore rules, then reindex the project. A cleared project index
+            stays paused until reindexed. Secure and sensitive content may be
+            intentionally excluded.
+          </p>
+        </details>
+        <details>
+          <summary>
+            The AI model list is empty or authentication failed.
+          </summary>
+          <p>
+            For local endpoints, start the server, load a model, check the API
+            prefix and key, then Save &amp; test again. Other hosts need HTTPS.
+            For Codex/Cursor/Claude, install the supported CLI, sign in and
+            Check connection after returning. A reachable server can still
+            return an empty list; enter its model ID if known. AI setup can
+            always be skipped.
+          </p>
+        </details>
+        <details>
+          <summary>A file save reports a conflict or failure.</summary>
+          <p>
+            A conflict means the disk file changed after it was read. Reload it
+            to keep external changes, or deliberately overwrite it. On failure,
+            keep the editor open, check drive availability and permissions, and
+            retry; the app retains your local draft.
+          </p>
+        </details>
+        <details>
+          <summary>The inspector cannot save its draft.</summary>
+          <p>
+            Review and approve the separate native save confirmation. If
+            PROJECT.md changed after scanning, scan and generate a fresh draft.
+            Configure a supported in-app provider and model first; Claude Code
+            is used in its own terminal.
+          </p>
+        </details>
+        <details>
+          <summary>
+            The desktop app will not open on a fresh Windows installation.
+          </summary>
+          <p>
+            Foldory requires Windows 10/11 x64 and Microsoft Edge WebView2
+            Runtime. Setup, or the standalone app’s first-run prompt, offers to
+            install a missing runtime. The download needs internet access. Retry
+            the runtime installation if it fails; device policy may require
+            administrator assistance.
+          </p>
+        </details>
+        <details>
+          <summary>Can I delete a project from the dashboard?</summary>
+          <p>
+            There is no dashboard action that deletes a whole project from disk.
+            Hide it or remove/disconnect its source to adjust the library. File
+            and folder deletion inside the Files view is a separate operation
+            and can affect disk contents.
+          </p>
+        </details>
+        <div class="help-callout help-private">
+          Foldory is a local workspace, not an encrypted vault or a backup
+          service. Its protections apply to app operations. Keep separate
+          backups and use your operating system’s protections for sensitive
+          files.
+        </div>
+      </section>
+      <footer>
+        Foldory · Built-in offline guide · No external fonts, images or scripts
+        required.
+      </footer>
+    </main>
+  </body>
+</html>

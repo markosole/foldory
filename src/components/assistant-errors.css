@@ -1,0 +1,105 @@
+.assistant-error-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  margin: 0 0 10px;
+  padding: 13px 14px;
+  border: 1px solid #6b4642;
+  border-radius: 11px;
+  background: #342725;
+  color: #f2dbd6;
+  font-size: 12px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+  min-width: 0;
+  max-height: min(360px, 44vh);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.assistant-error-card[data-error-code="database_busy"],
+.assistant-error-card[data-error-code="ai_rate_limit"],
+.assistant-error-card[data-error-code="request_timeout"] {
+  background: #332c22;
+  border-color: #6a5635;
+  color: #edddc2;
+}
+.assistant-error-card[data-error-code="permission"],
+.assistant-error-card[data-error-code="source_expired"],
+.assistant-error-card[data-error-code="source_limit"],
+.assistant-error-card[data-error-code="file_access"] {
+  background: #302a38;
+  border-color: #594b6a;
+  color: #e1d5ef;
+}
+.assistant-error-icon {
+  flex: 0 0 auto;
+  margin-top: 3px;
+  opacity: 0.85;
+}
+.assistant-error-body {
+  flex: 1;
+  min-width: 0;
+}
+.assistant-error-category {
+  display: block;
+  margin-bottom: 2px;
+  color: inherit;
+  opacity: 0.7;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.assistant-error-card h3 {
+  margin: 0 0 5px;
+  font-size: 13px;
+  line-height: 1.4;
+  color: inherit;
+}
+.assistant-error-card p {
+  margin: 0 0 7px;
+}
+.assistant-error-card .assistant-error-action {
+  color: inherit;
+  opacity: 0.85;
+}
+.assistant-error-retry {
+  margin: 2px 0 7px;
+}
+.assistant-error-details {
+  margin-top: 7px;
+  border-top: 1px solid #ffffff17;
+  padding-top: 7px;
+}
+.assistant-error-details summary {
+  cursor: pointer;
+  width: fit-content;
+  font-size: 11px;
+  color: inherit;
+  opacity: 0.8;
+}
+.assistant-error-details summary:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+.assistant-error-details pre {
+  margin: 8px 0;
+  padding: 9px;
+  border-radius: 6px;
+  background: #00000024;
+  max-height: 130px;
+  overflow: auto;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font:
+    10px/1.5 Consolas,
+    monospace;
+  color: inherit;
+}
+.assistant-error-code {
+  font:
+    10px/1.5 Consolas,
+    monospace;
+  opacity: 0.7;
+}

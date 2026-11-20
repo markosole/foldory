@@ -1,0 +1,161 @@
+.overview-inspector-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 0 0 auto;
+  padding: 9px 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.overview-empty-actions,
+.inspector-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.project-inspector {
+  display: grid;
+  gap: 14px;
+  font-size: 12px;
+}
+
+.project-inspector .inspector-profile {
+  margin: 0;
+}
+
+.inspector-description,
+.inspector-access p {
+  color: var(--muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+.inspector-access {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+}
+
+.inspector-access > svg {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.inspector-access > div {
+  flex: 1 1 210px;
+}
+
+.inspector-evidence {
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  padding: 8px 12px;
+}
+
+.inspector-evidence summary {
+  cursor: pointer;
+}
+
+.inspector-evidence ul,
+.inspector-evidence pre {
+  max-height: 130px;
+  overflow: auto;
+  overflow-wrap: anywhere;
+}
+
+.inspector-evidence pre {
+  white-space: pre-wrap;
+  margin-bottom: 0;
+}
+
+.inspector-draft textarea {
+  width: 100%;
+  max-height: 45vh;
+  min-height: 120px;
+  resize: vertical;
+  font-family: Consolas, monospace;
+}
+
+.inspector-actions {
+  justify-content: flex-end;
+}
+
+.inspector-scan {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.inspector-scan-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(110px, 0.4fr);
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.inspector-scan .field {
+  margin: 0;
+}
+
+.inspector-scan details[open] .field {
+  margin-top: 12px;
+}
+
+.inspector-context {
+  display: grid;
+  gap: 8px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  padding: 12px;
+  min-width: 0;
+}
+
+.inspector-context h3,
+.inspector-context p {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.inspector-context pre {
+  max-height: 32vh;
+}
+
+.inspector-context ul {
+  max-height: 36vh;
+  padding-left: 19px;
+}
+
+.inspector-approval {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  overflow-wrap: anywhere;
+}
+
+.inspector-approval input {
+  flex: none;
+  accent-color: var(--accent);
+}
+
+.modal.inspector-preview {
+  width: 1040px;
+  height: min(760px, calc(100vh - 48px));
+}
+
+.modal.inspector-preview[open] {
+  display: flex;
+  flex-direction: column;
+}
+
+.inspector-rendered {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  padding: 0 clamp(8px, 4vw, 44px);
+  overflow-wrap: anywhere;
+}

@@ -1,0 +1,47 @@
+.markdown-code-block {
+  margin: 16px 0;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #343c47;
+  border-radius: 8px;
+  background: #16191e;
+}
+.markdown-code-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 7px 12px;
+  border-bottom: 1px solid #343c47;
+  font-size: 10px;
+  color: #a7b5bd;
+  background: #20252b;
+}
+.markdown-code-toolbar button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 3px 6px;
+  background: transparent;
+  color: #c1d0d8;
+  font: inherit;
+}
+.markdown-code-toolbar button:hover {
+  background: #ffffff10;
+  border-color: #ffffff19;
+}
+.markdown .markdown-code-block pre {
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+.markdown .markdown-copy-error {
+  padding: 7px 12px;
+  margin: 0;
+  border-top: 1px solid #70463f;
+  color: #e4b1a7;
+  font-size: 11px;
+}

@@ -1,0 +1,43 @@
+[package]
+name = "foldory"
+version = "1.2.2"
+description = "A local-first desktop project workspace"
+edition = "2021"
+
+[lib]
+name = "foldory_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }
+tauri-plugin-single-instance = "2"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+jsonc-parser = { version = "0.34", features = ["serde"] }
+rusqlite = { version = "0.40.2", features = ["backup", "bundled", "functions"] }
+uuid = { version = "1", features = ["v4"] }
+ignore = "0.4"
+regex = "1"
+sha2 = "0.10"
+rfd = "0.15"
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
+keyring = { version = "3", features = ["windows-native"] }
+url = "2"
+tempfile = "3"
+tokio = { version = "1", features = ["io-util", "macros", "process", "sync", "time"] }
+calamine = "0.38"
+csv = "1.4"
+roxmltree = "0.21"
+base64 = "0.22"
+zip = { version = "9.6", default-features = false, features = ["deflate"] }
+
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "0.61", features = ["Win32_UI_Controls", "Win32_UI_WindowsAndMessaging"] }
+
+[profile.release]
+debug = 0
+incremental = false
+strip = "symbols"
