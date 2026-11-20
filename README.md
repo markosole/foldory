@@ -14,7 +14,7 @@
   &nbsp;&middot;&nbsp;
   <a href="https://foldory.reflect.ba/interactive/"><strong>Interactive demo</strong></a>
   &nbsp;&middot;&nbsp;
-  <strong>Windows release temporarily unavailable</strong>
+  <a href="https://foldory.reflect.ba/Foldory_1.2.2_x64-setup.exe"><strong>Download for Windows</strong></a>
   &nbsp;&middot;&nbsp;
   <a href="#development"><strong>Development</strong></a>
 </p>
@@ -52,9 +52,9 @@ AI features are optional. When enabled, only the context you approve is sent to 
 
 ## Install
 
-The Windows installer is temporarily unavailable while the published artifact is
-being refreshed. Do not redistribute an older installer. A verified replacement
-will be linked here when it is uploaded.
+Download the verified installer for **Windows 10 or 11 (64-bit)**:
+
+**[Download Foldory 1.2.2](https://foldory.reflect.ba/Foldory_1.2.2_x64-setup.exe)**
 
 Microsoft Edge WebView2 Runtime is required. The installer offers to download it automatically when it is not already available.
 
@@ -99,12 +99,28 @@ npm run format:check
 ### Build the installer
 
 ```powershell
+npm ci
+npm test
+cargo test --manifest-path src-tauri/Cargo.toml
+npm run format:check
+$env:FOLDORY_SKIP_OPEN_BUILD = "1"
 npm run tauri build
+npm run privacy:check
+Get-FileHash -Algorithm SHA256 `
+  src-tauri/target/release/foldory.exe, `
+  src-tauri/target/release/bundle/nsis/Foldory_1.2.2_x64-setup.exe
 ```
 
 The release executable is written to `src-tauri/target/release/foldory.exe`, and the NSIS installer is written to `src-tauri/target/release/bundle/nsis/`.
 
-Release builds remap local source and user-profile paths, strip native symbols, and fail the build if the final executable still contains a developer username or build-machine path. Run `npm run privacy:check` again before publishing an artifact.
+Always build through `npm run tauri build`. The wrapper remaps local source and
+user-profile paths, strips native symbols, removes PDB files, and fails the build
+if a release artifact still contains a developer username or build-machine path.
+Calling Cargo or the Tauri CLI directly bypasses these release protections.
+
+Publish only the final executable or installer, never the full `target` directory.
+Record the SHA-256 hashes and confirm that a downloaded copy of each published
+artifact has the same hash before linking it publicly.
 
 ## Tech stack
 
