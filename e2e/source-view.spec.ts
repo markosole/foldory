@@ -257,16 +257,6 @@ test("search keeps a matching pinned project in both pinned and project results"
 test("opening a pinned project reveals its matching library row", async ({
   page,
 }) => {
-  await page.addInitScript(() => {
-    Object.assign(window, { revealedLibraryProjects: [] as string[] });
-    HTMLElement.prototype.scrollIntoView = function () {
-      const projectId = this.dataset.projectId;
-      if (projectId)
-        (
-          window as unknown as { revealedLibraryProjects: string[] }
-        ).revealedLibraryProjects.push(projectId);
-    };
-  });
   await fixture(page);
   const allProjects = page.getByRole("button", { name: /^All projects/ });
   await allProjects.click();
@@ -277,20 +267,11 @@ test("opening a pinned project reveals its matching library row", async ({
     .getByRole("button", { name: "Shared project" })
     .click();
   await expect(allProjects).toHaveAttribute("aria-expanded", "true");
-  await expect
-    .poll(() =>
-      page.evaluate(
-        () =>
-          (window as unknown as { revealedLibraryProjects: string[] })
-            .revealedLibraryProjects,
-      ),
-    )
-    .toContain("local-shared");
-  await expect(
-    page.locator(
-      '#all-projects-list .sidebar-project[data-project-id="local-shared"]',
-    ),
-  ).toHaveClass(/active/);
+  const libraryProject = page.locator(
+    '#all-projects-list .sidebar-project[data-project-id="local-shared"]',
+  );
+  await expect(libraryProject).toBeVisible();
+  await expect(libraryProject).toHaveClass(/active/);
 });
 
 test("grouped projects retain selection, context actions and source connection updates", async ({

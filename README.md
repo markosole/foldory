@@ -98,6 +98,13 @@ npm run format:check
 
 ### Build the installer
 
+On Windows, double-click `build_release.bat` to run every test and privacy check,
+build the release, copy both publishable files into `releases/<version>-clean`,
+print their SHA-256 hashes, and open that folder in Explorer. For an unattended
+run that does not open Explorer, use `build_release.bat --no-open`.
+
+The equivalent manual workflow is:
+
 ```powershell
 npm ci
 npm test

@@ -2372,6 +2372,7 @@ test("Enter sends once; Shift+Enter inserts a newline and IME Enter does not sen
           projectId: "p0",
           prompt: "First line\nSecond line",
           includeOverview: false,
+          scopeProjectIds: [],
           sourceIds: [],
         },
       },
